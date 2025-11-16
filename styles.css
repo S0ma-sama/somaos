@@ -14,7 +14,7 @@ body {
 .background {
     height: 100%;
     width: 100%;
-    background-image: url(assets/pozadie.png);
+    background-image: url(assets/pozadie-min.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
