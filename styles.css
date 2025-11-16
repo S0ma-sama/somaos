@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'Epoch';
+    src: url(/font/Epoch-BF6881cf42e6637.otf) format('opentype');
+}
+
+body {
+    margin: 0;
+    background: #131313;
+    font-family: 'Epoch';
+    height: 100vh;
+    width: 100vw;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    background-image: url(assets/pozadie.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #131313 ;
+}
+
+.split-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ľavá strana – NAV menu */
+.left-side {
+    width: 35%;    
+    overflow-y: auto;
+}
+
+/* pravá strana – galéria */
+.right-side {
+    margin-top: 20px;
+    height: 80%;
+    width: 65%;
+    position: relative;
+    overflow: visible;
+}
+
+/* celé okno */
+.nav-window {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    width: 340px;
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #ffffff88;
+    overflow: hidden;   /* kvôli animácii */
+}
+
+/* horná lišta */
+.window-header {
+    background: white;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* biele mini tlačidlo */
+.min-btn {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.min-btn:hover {
+    background-color: #2f2f2f;
+    border: 2px solid white;
+    box-shadow: 0 0 25px #2f2f2f;
+    transition: 0.2s ease;
+}
+
+/* tmavé pozadie pod lištou */
+.window-content {
+    background: #2f2f2f;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    row-gap: 15px;
+    transition: height 0.35s ease, padding 0.3s ease;
+}
+
+.item {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 60px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.item img {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+}
+
+.item span {
+    color: white;
+    font-size: 14px;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.window-content .item {
+    text-align: center;
+    color: white;
+    
+}
+
+.window-content img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.item:hover img {
+    transform: scale(1.12);
+    filter: brightness(1.4);
+    box-shadow: 0 0 25px #ffffff88;
+}
+
+.item:hover span {
+    box-shadow: 0 0 25px #ffffff88;
+    color: #fff;
+}
+
+
+/*SEKCIA ---- GALERIA*/
+
+.gallery-window {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #2f2f2f;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #ffffff88;
+}
+
+/* horná lišta */
+.gallery-header {
+    background: white;
+    padding: 10px 12px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* obsah galérie */
+.gallery-content {
+    padding: 20px;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* obrázky v galérii */
+.gal-img {
+    display: block;
+    margin: auto;
+    width: 65%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* hover efekt obrázka */
+.gal-img:hover {
+    box-shadow: 0 0 25px #ffffff88;
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+}
+
+/* fullscreen lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+#lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.text {
+    color: white;
+    font-size: 24px;
+}
+
+.picture img{
+    width: 70%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;   
+
+}
+
+.footer p {
+    text-align: center;
+}
+
+/* RESPONZÍVNE ŠTÝLY PRE MOBIL */
+@media (max-width: 1150px) {
+    body {
+        height: auto;
+        height: 100vh;
+    }
+    
+    .split-layout {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .left-side,
+    .right-side {
+        width: 100%;
+        height: auto;
+    }
+    
+    .nav-window {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .gallery-window {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 90%;
+        height: auto;
+        min-height: 500px;
+        margin: 20px auto;
+    }
+    
+    .gallery-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .gal-img {
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .window-content {
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .item {
+        width: 50px;
+    }
+    
+    .item img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .text {
+        font-size: 18px;
+        padding: 0 15px;
+        text-align: center;
+    }
+    
+    .picture img {
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .footer {
+        position: relative;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .nav-window,
+    .gallery-window {
+        width: 95%;
+        margin: 10px auto;
+    }
+    
+    .gallery-content {
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .window-content {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .item {
+        width: 45px;
+    }
+    
+    .item img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .item span {
+        font-size: 12px;
+    }
+    
+    .text {
+        font-size: 16px;
+    }
+    
+    .window-header,
+    .gallery-header {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
