@@ -62,13 +62,13 @@
 
                 <!-- horna lista -->
                 <div class="gallery-header">
-                    <span>C:\user\navigation\menu\About</span>
+                    <span>C:\user\navigation\menu\Newsletter</span>
                     <div class="min-btn" id="minBtnGallery"></div>
                 </div>
             
                 <!-- Obsah galerie -->
                 <div class="galleryContent" id="galleryContent">
-                    <form action="">
+                    <form id="newsletterForm">
                         <h2>SUBSCRIBE TO NEWSLETTER</h2>
                             <div class="data">
                                 <input type="text" placeholder="Mail" name="mail" required>
@@ -85,7 +85,16 @@
         <p>©Ondrej Jano 2025</p>
     </div>
 </div>
-    
+<div id="popupWindow" class="popup-window hidden">
+    <div class="popup-header">
+        <span>Notification</span>
+        <div id="popupClose" class="popup-close"></div>
+    </div>
+
+    <div class="popup-content">
+        <h2>SUBSCRIBED!</h2>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

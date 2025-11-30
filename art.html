@@ -55,6 +55,20 @@
                 
                 </div>        
             </div>
+            <div class="filter-window" id="filterWindow">
+                <div class="filter-header">
+                    <span>filter.exe</span>
+                    <div class="min-btn" id="filterMinBtn"></div>
+                </div>
+
+                <div class="filter-content" id="filterContent">
+                    <button data-filter="all" class="filter-btn">All</button>
+                    <button data-filter="ink" class="filter-btn">Ink</button>
+                    <button data-filter="charcoal" class="filter-btn">Charcoal</button>
+                    <button data-filter="painting" class="filter-btn">Painting</button>
+                    <button data-filter="digital" class="filter-btn">Digital</button>
+                </div>
+            </div>
         </div>
                     <!-- Galeria -->
         <div class="right-side">
@@ -69,32 +83,42 @@
                 <!-- Obsah galerie -->
                 <div class="gallery-content" id="galleryContent">
             
-                    <img src="art_assets/DSC07663-2.png" class="gal-img">
-                    <img src="art_assets/DSC07666-4.png" class="gal-img">
-                    <img src="art_assets/DSC07669-7.png" class="gal-img">
-                    <img src="art_assets/DSC07671-9.png" class="gal-img">
-                    <img src="art_assets/DSC07673-11.png" class="gal-img">
-                    <img src="art_assets/semestral-knight_v2.png" class="gal-img">
-                    <img src="art_assets/portfolio-tlac3.png" class="gal-img">
-                    <img src="art_assets/portfolio-tlac8.png" class="gal-img">
-                    <img src="art_assets/fubuki full.png" class="gal-img">
-                    <img src="art_assets/brasil-miku2.png" class="gal-img">
-                    <img src="art_assets/3.png" class="gal-img">
-                    <img src="art_assets/portfolio-tlac.jpg" class="gal-img">
-                    <img src="art_assets/portfolio-tlac2.jpg" class="gal-img">
-                    <img src="art_assets/portfolio-tlac2.png" class="gal-img">
-                    <img src="art_assets/portfolio-tlac4.jpg" class="gal-img">
-                    <img src="art_assets/portfolio-tlac4.png" class="gal-img">
-                    <img src="art_assets/Asset 15.png" class="gal-img">
-                    <img src="art_assets/Asset 16.png" class="gal-img">
-                    <img src="art_assets/Asset 17.png" class="gal-img">
-                    <img src="art_assets/Asset 18.png" class="gal-img">
-                    <img src="art_assets/Asset 19.png" class="gal-img">
-                    <img src="art_assets/Asset 20.png" class="gal-img">
-                    <img src="art_assets/Asset 21.png" class="gal-img">
-                    <img src="art_assets/Asset 22.png" class="gal-img">
-                    <img src="art_assets/Asset 23.png" class="gal-img">
-                    <img src="art_assets/Asset 26.png" class="gal-img">
+                    <img src="art_assets/DSC07663-2.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/DSC07666-4.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/DSC07669-7.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/DSC07671-9.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/DSC07673-11.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/semestral-knight_v2.png" class="gal-img" data-category="digital">
+                    <img src="art_assets/portfolio-tlac3.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/portfolio-tlac8.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/fubuki full.png" class="gal-img" data-category="digital">
+                    <img src="art_assets/brasil-miku2.png" class="gal-img" data-category="digital">
+                    <img src="art_assets/3.png" class="gal-img" data-category="painting">
+                    <img src="art_assets/portfolio-tlac.jpg" class="gal-img" data-category="painting">
+                    <img src="art_assets/portfolio-tlac2.jpg" class="gal-img" data-category="ink">
+                    <img src="art_assets/portfolio-tlac2.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/portfolio-tlac4.jpg" class="gal-img" data-category="painting">
+                    <img src="art_assets/portfolio-tlac4.png" class="gal-img" data-category="painting">
+                    <img src="art_assets/Asset 15.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/Asset 16.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/Asset 17.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/Asset 18.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/Asset 19.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/Asset 20.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/Asset 21.png" class="gal-img" data-category="ink">
+                    <img src="art_assets/Asset 22.png" class="gal-img" data-category="charcoal">
+                    <img src="art_assets/Asset 23.png" class="gal-img" data-category="charcoal">
+                    <img src="art_assets/Asset 26.png" class="gal-img" data-category="painting">
+                    <img src="art_assets/backboneMagentaColor.png" class="gal-img" data-category="digital">
+                    <img src="art_assets/succubuza.jpg" class="gal-img" data-category="digital">
+                    <img src="art_assets/riasCrop1.png" class="gal-img" data-category="digital">
+                    <img src="art_assets/bitmap lynx.png" class="gal-img" data-category="digital">
+                    <img src="art_assets/Asset 1.png" class="gal-img" data-category="painting">
+                    <img src="art_assets/Asset 2.png" class="gal-img" data-category="painting">
+                    <img src="art_assets/Asset 3.png" class="gal-img" data-category="painting">
+                    <img src="art_assets/Asset 4.png" class="gal-img" data-category="painting">
+                    <img src="art_assets/Asset 5.png" class="gal-img" data-category="painting">
+                    <img src="art_assets/Asset 6.png" class="gal-img" data-category="painting">
                 </div>
             </div>
         </div>

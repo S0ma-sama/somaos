@@ -55,6 +55,20 @@
                 
                 </div>        
             </div>
+                        <!-- filter -->
+            <div class="filter-window" id="filterWindow">
+                <div class="filter-header">
+                    <span>filter.exe</span>
+                    <div class="min-btn" id="filterMinBtn"></div>
+                </div>
+
+                <div class="filter-content" id="filterContent">
+                    <button data-filter="all" class="filter-btn">All</button>
+                    <button data-filter="people" class="filter-btn">People</button>
+                    <button data-filter="car" class="filter-btn">Car</button>
+                    <button data-filter="other" class="filter-btn">Other</button>
+                </div>
+            </div>
         </div>
                     <!-- Galeria -->
         <div class="right-side">
@@ -69,31 +83,43 @@
                 <!-- Obsah galerie -->
                 <div class="gallery-content" id="galleryContent">
             
-                    <img src="photo_assets/1/DSC03028-7.jpg" class="gal-img">
-                    <img src="photo_assets/1/DSC03455-2.jpg" class="gal-img">
-                    <img src="photo_assets/1/DSC04617-12.jpg" class="gal-img">
-                    <img src="photo_assets/1/DSC04632-17.jpg" class="gal-img">
-                    <img src="photo_assets/1/DSC07259-20.jpg" class="gal-img">
-                    <img src="photo_assets/1/DSC07292-31.jpg" class="gal-img">
-                    <img src="photo_assets/1/DSC07325-39.jpg" class="gal-img">
-                    <img src="photo_assets/1/DSC07354-47.jpg" class="gal-img">
-                    <img src="photo_assets/1/DSC07380-51.jpg" class="gal-img">
-                    <img src="photo_assets/1/DSC07387-53.jpg" class="gal-img">
-                    <img src="photo_assets/2/DSC07617-39.jpg" class="gal-img">
-                    <img src="photo_assets/2/DSC07623-11.jpg" class="gal-img">
-                    <img src="photo_assets/2/DSC07624-40.jpg" class="gal-img">
-                    <img src="photo_assets/2/DSC07648-20.jpg" class="gal-img">
-                    <img src="photo_assets/2/DSC08523-28.jpg" class="gal-img">
-                    <img src="photo_assets/2/DSC08568-44.jpg" class="gal-img">
-                    <img src="photo_assets/2/DSC08569-45.jpg" class="gal-img">
-                    <img src="photo_assets/2/DSC08602-63.jpg" class="gal-img">
-                    <img src="photo_assets/2/illegalnight24-115.jpg" class="gal-img">
-                    <img src="photo_assets/2/illegalnight24-117.jpg" class="gal-img">
-                    <img src="photo_assets/3/DSC02943-9.jpg" class="gal-img">
-                    <img src="photo_assets/3/DSC06188-61.jpg" class="gal-img">
-                    <img src="photo_assets/3/DSC08672-92.jpg" class="gal-img">
-                    <img src="photo_assets/3/DSC09832-68.jpg" class="gal-img">
-                    <img src="photo_assets/3/DSC09840-70.jpg" class="gal-img">
+                    <img src="photo_assets/1/DSC03028-7.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/1/DSC03455-2.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/1/DSC04617-12.jpg" class="gal-img" data-category="other">
+                    <img src="photo_assets/1/DSC04632-17.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/1/DSC07259-20.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/1/DSC07292-31.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/1/DSC07325-39.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/1/DSC07354-47.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/1/DSC07380-51.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/1/DSC07387-53.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/2/DSC07617-39.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/2/DSC07623-11.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/2/DSC07624-40.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/2/DSC07648-20.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/2/DSC08523-28.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/2/DSC08568-44.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/2/DSC08569-45.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/2/DSC08602-63.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/2/illegalnight24-115.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/2/illegalnight24-117.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/DSC02943-9.jpg" class="gal-img" data-category="other">
+                    <img src="photo_assets/3/DSC06188-61.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/3/DSC08672-92.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/DSC09832-68.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/3/DSC09840-70.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/3/cassovia23-21.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/cassovia23-29.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/cassovia23-31.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/cassovia23-50.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/cassovia23-55.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/cassovia23-58.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/cassovia23-71.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/cassovia23-73.jpg" class="gal-img" data-category="car">
+                    <img src="photo_assets/3/cassovia23-181.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/3/DSC03436-108.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/3/DSC03449-110.jpg" class="gal-img" data-category="people">
+                    <img src="photo_assets/3/DSC03464-112.jpg" class="gal-img" data-category="people">
                 </div>
             </div>
         </div>

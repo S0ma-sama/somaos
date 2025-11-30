@@ -27,13 +27,13 @@ body {
     overflow: hidden;
 }
 
-/* ľavá strana – NAV menu */
+/* navko lava strana*/
 .left-side {
     width: 35%;    
     overflow-y: auto;
 }
 
-/* pravá strana – galéria */
+/* galeria/obsah na pravej strane*/
 .right-side {
     margin-top: 20px;
     height: 80%;
@@ -42,7 +42,7 @@ body {
     overflow: visible;
 }
 
-/* celé okno */
+/* navigacne menu */
 .nav-window {
     position: fixed;
     top: 40px;
@@ -54,7 +54,7 @@ body {
     overflow: hidden;   /* kvôli animácii */
 }
 
-/* horná lišta */
+/* lista */
 .window-header {
     background: white;
     padding: 10px 12px;
@@ -64,7 +64,7 @@ body {
     font-size: 14px;
 }
 
-/* biele mini tlačidlo */
+/* button */
 .min-btn {
     width: 18px;
     height: 18px;
@@ -81,7 +81,7 @@ body {
     box-shadow: 0 0 25px #2f2f2f;
 }
 
-/* tmavé pozadie pod lištou */
+/* pozadie okna*/
 .window-content {
     background: #2f2f2f;
     padding: 25px;
@@ -135,6 +135,67 @@ body {
         0 0 32px rgba(255, 255, 255, 0.4);
     color: #fff;
 }
+
+/* FILTER OKNO */
+
+.filter-window {
+    position: fixed;
+    top: 400px;
+    left: 40px;
+    width: 340px;
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #ffffff88;
+    overflow: hidden;
+}
+
+.filter-header {
+    background: white;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.filter-content {
+    background: #2f2f2f;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    transition: height 0.35s ease, padding 0.3s ease;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    text-transform: lowercase;
+    font-style: italic;
+    font-family: "Epoch";
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 0.5px solid white;
+    background: #2f2f2f;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+.filter-btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 25px #ffffff88;
+    transform: scale(1.05);
+}
+
+.filter-btn.active-filter {
+    background: white;
+    color: black;
+    box-shadow: 0 0 25px #ffffff88;
+    transform: scale(1.05);
+}
+
 
 
 /*SEKCIA ---- GALERIA*/
@@ -202,6 +263,8 @@ body {
         0 0 24px rgba(255, 255, 255, 0.6),
         0 0 32px rgba(255, 255, 255, 0.4);
 }
+
+/* newsletter formular */
 
 .data {
     display: flex;
@@ -279,12 +342,74 @@ body {
 
 }
 
+/* popup okno */
+
+.popup-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    transform: translate(-50%, -50%);
+    background: #2f2f2f;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #ffffff88;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 9999;
+}
+
+.popup-window.hidden {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+    pointer-events: none;
+}
+
+.popup-header {
+    background: white;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.popup-close {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.popup-close:hover {
+    background: #2f2f2f;
+    border: 2px solid white;
+}
+
+.popup-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.popup-content h2 {
+    color: white;
+    font-size: 32px;
+    text-shadow:
+        0 0 16px rgba(255, 255, 255, 0.7),
+        0 0 24px rgba(255, 255, 255, 0.6),
+        0 0 32px rgba(255, 255, 255, 0.4);
+}
+
+
 .footer p {
     text-align: center;
 }
 
-/* RESPONZÍVNE ŠTÝLY PRE MOBIL */
-@media (max-width: 880px) {
+/* responzivita pre telefony */
+@media (max-width: 1050px) {
     body {
         height: auto;
         height: 100vh;
@@ -309,6 +434,18 @@ body {
         margin: 20px auto;
     }
     
+    .filter-window {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .filter-content {
+        justify-content: center;
+    }
+
     .gallery-window {
         position: relative;
         top: auto;
@@ -375,9 +512,10 @@ body {
         position: relative;
         margin-top: 20px;
     }
+
 }
 
-@media (max-width: 650px) {
+@media (max-width: 780px) {
     .nav-window,
     .gallery-window {
         width: 95%;
